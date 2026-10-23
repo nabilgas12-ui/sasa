@@ -1,4 +1,4 @@
-const CACHE_NAME = "sabrina-romance-v7";
+const CACHE_NAME = "sabrina-romance-v8";
 const CORE_FILES = ["./", "./index.html", "./style.css", "./script.js", "./manifest.webmanifest", "./assets/app-icon.svg"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_FILES)).then(() => self.skipWaiting()));

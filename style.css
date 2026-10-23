@@ -180,3 +180,11 @@ main,.hero,.hero-copy,.hero-art,section,.letter-card,.birthday-card,.promise-car
 .tc-wave{position:absolute;bottom:-1px;left:0;width:100%;height:34px;display:block}
 @keyframes tc-pulse{50%{transform:scale(1.1);color:#e8799a}}
 @media(prefers-reduced-motion:reduce){.tc-live strong,.tc-rise i{animation:none}}
+
+
+/* الورود تبقى ظاهرة على الهواتف التي فعّلت "تقليل الحركة" */
+.petal-layer .petal{animation-duration:var(--dur,8s)!important;animation-iteration-count:1!important}
+.center-bloom{animation-duration:8s!important;animation-iteration-count:1!important}
+.confetti-heart{animation-duration:2.4s!important;animation-iteration-count:1!important}
+.magic-flash{animation-duration:.9s!important;animation-iteration-count:1!important}
+.tc-rise i{animation-duration:9s!important;animation-iteration-count:infinite!important}

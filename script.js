@@ -1,7 +1,7 @@
 // تخصيص الموقع: غيّر تاريخ بداية العلاقة بصيغة YYYY-MM-DD.
-// مثال: "2024-11-03". التاريخ الحالي تجريبي ويجب استبداله بتاريخكما الحقيقي.
+// تاريخ التعارف: 19 أغسطس 2020.
 const SETTINGS = {
-  startDate: "2025-02-14",
+  startDate: "2020-08-19",
   musicFile: "assets/soft-music.mp3"
 };
 
@@ -52,7 +52,7 @@ function rainPetals(count = 55) {
     petal.style.setProperty("--sway", (Math.random() * 80 - 40) + "px");
     petal.style.fontSize = (16 + Math.random() * 25) + "px";
     petal.style.color = ["#d95e83", "#f0a1b8", "#e7b8c8", "#c88a9f", "#f4b6c9"][Math.floor(Math.random() * 5)];
-    petal.style.animationDuration = (6 + Math.random() * 4) + "s";
+    const dur = (6 + Math.random() * 4); petal.style.animationDuration = dur + "s"; petal.style.setProperty("--dur", dur + "s");
     petal.style.animationDelay = (Math.random() * 3.5) + "s";
     layer.appendChild(petal);
     setTimeout(() => petal.remove(), 14500);
@@ -146,7 +146,7 @@ musicButton.addEventListener("click", async () => {
       $("#musicLabel").textContent = "أوقفي الموسيقى";
       showToast("أصبحت الأجواء أكثر دفئًا ♡");
     } catch (error) {
-      showToast("أضيفي ملف assets/soft-music.mp3 لتشغيل الموسيقى.");
+      showToast("تعذّر تشغيل الموسيقى الآن ♡");
     }
   } else {
     music.pause();
